@@ -2,7 +2,7 @@ let isShown = false;
 let timeout = false;
 
 function wakeUpNiwtify() {
-    fetch(`https://niwtify.niweera.gq/v2`).catch(console.log)
+    fetch(`https://niwtify.niweera.com/v2`).catch(console.log)
 }
 
 function openSpotify(link) {
@@ -20,7 +20,7 @@ function showSpotify() {
         return;
     }
 
-  fetch(`https://niwtify.niweera.gq/v2`)
+  fetch(`https://niwtify.niweera.com/v2`)
         .then(response => {
             return response.json();
         })
