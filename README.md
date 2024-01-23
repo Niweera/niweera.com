@@ -6,6 +6,8 @@ Official Website of Nipuna Weerasekara
 
 ```bash
 
+$ eval "$(rbenv init -)"
+
 $ bundle install
 
 $ bundle exec jekyll serve
