@@ -7,7 +7,7 @@ first_name: Nipuna
 last_name: WEERASEKARA
 email: w.nipuna@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  I am Nipuna Weerasekara, a web developer turned security and privacy researcher. I have published and presented on the research areas of software vulnerability remediation, web application security and vulnerability remediation in open-source. Currently, I am a PhD student at IMDEA Networks Institute in Madrid, Spain. Find me @Niweera on socials.
+  I am Nipuna Weerasekara, a web developer turned security and privacy researcher. I have published and presented on the research areas of software vulnerability remediation, web application security and vulnerability remediation in open-source. Find me @Niweera on socials.
 footer_text: >
 
 icon: /assets/logo/niweera.jpg # the emoji used as the favicon
@@ -55,7 +55,7 @@ medium_username: niweera # your Medium username
 quora_username: Nipuna-Weerasekara # your Quora username
 publons_id: # your ID on Publons
 blogger_url: # your blogger URL
-work_url: https://networks.imdea.org/team/imdea-networks-team/people/nipuna-weerasekara/
+work_url: 
 keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
