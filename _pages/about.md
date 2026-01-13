@@ -8,11 +8,14 @@ profile:
   align: right
   image: prof_pic.jpg
   address: >
-    Madrid, Spain
+    Melbourne, Australia
 
 news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-WEBSITE UNDER MAINTENANCE FOR 2025.
+<blockquote>
+  <p><em>“I was waiting for something extraordinary to happen, but as the years wasted on, nothing ever did unless I caused it.”</em></p>
+  <footer>— Charles Bukowski</footer>
+</blockquote>
