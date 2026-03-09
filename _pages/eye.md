@@ -1,0 +1,63 @@
+---
+layout: bare
+title: ""
+permalink: /eye/
+noindex: true
+sitemap: false
+no_analytics: true
+---
+
+<style>
+.dossier {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  max-width: 72ch;
+  margin: 2.5em auto;
+  padding: 3em 2.4em;
+  background: #ece7db;
+  color: #1b1a17;
+  line-height: 1.6;
+  border: 1px solid #cdc6b5;
+  box-shadow: 0 1px 0 #fff inset;
+}
+.dossier h1 { font-family: inherit; font-size: 1.5em; letter-spacing: 0.18em; margin: 0.2em 0 0.1em; }
+.dossier .cls { letter-spacing: 0.22em; font-size: 0.82em; color: #4a463d; margin-bottom: 2.2em; }
+.dossier .dc { color: #8a2020; }
+.dossier .meta { font-size: 0.86em; color: #4a463d; margin-bottom: 2em; }
+.dossier .label { letter-spacing: 0.12em; font-size: 0.82em; color: #4a463d; margin: 2.2em 0 0.6em; }
+.dossier .redact { color: #1b1a17; letter-spacing: 0.04em; line-height: 1.9; user-select: none; }
+.dossier .hl { background: #ddd5c2; padding: 0.6em 0.7em; display: block; margin: 1.6em 0; }
+.dossier .yr { border-bottom: 2px solid #8a2020; }
+.dossier .cipher {
+  font-size: 0.82em; line-height: 1.7; white-space: pre-wrap; word-break: break-word;
+  background: #e3ddcd; padding: 1em; margin: 0.6em 0 1.4em; color: #2a2820;
+}
+.dossier audio { width: 100%; margin: 0.4em 0 0.2em; filter: grayscale(1); }
+.dossier .foot { font-size: 0.78em; color: #6a655a; margin-top: 2.6em; letter-spacing: 0.06em; }
+[data-theme="dark"] .dossier { box-shadow: none; }
+</style>
+
+<div class="dossier">
+
+<p class="cls">████ ██████ // ORCON // NOFORN // <span class="dc">DECLASSIFIED — PURSUE</span></p>
+
+<h1>RECORD 047</h1>
+<p class="meta">DISPOSITION: <strong>UNRESOLVED</strong> &nbsp;·&nbsp; ORIGINATING OFFICE: ████████ &nbsp;·&nbsp; HANDLING: EYES ONLY</p>
+
+<p>Index 047 is an artifact. The cover sheet was scanned on ingest; the optical reader returned <span class="yr">1947</span>, and the leading character did not survive the pass. The page was filed under 047 and never re-checked. The day-one date is older than the office that filed it. The office is older than the program that declassified it. No one has corrected the order.</p>
+
+<p class="label">— BODY (REDACTED) —</p>
+<p class="redact">████ ███████ ██ ████ ██ █████ ███ ███████ ██████ ████ ██████ ████ ███ ████ ██ ███████ ███ █████ ██ ███ ██████ ████ ████████ ██ ████ ███ ████ ██ █████████ ████ ██ ███ ████ ███ ████ ███████ ██ ████.</p>
+
+<p class="hl">Whatever was logged in 1947 has kept this file under its eye ever since, and it does not read it the way you do.</p>
+
+<p class="label">— ANNEX I · INTERCEPT, ENCIPHERED —</p>
+<p>The running key is not written in this file. It rode in on the attached signal — not in what you hear, but in what the sound would show you if you laid it out and looked at it.</p>
+
+<p class="cipher">ZPEWY OERDR DXNSS YVVXT OEYSW KTISP IMGWS TSGPX FSRDG LBGST WBAMT YTSRA VAXNP EEAAD WLGKA ENIYS WKTIS PIMGI CWSNB KEKDD GPBSX OHNJX ABIYT XHIXT DNETY PRZZG HUDHT FWGEZ OTABL BKCVG PXLSS ERVXR IOFNT KEKDJ AIFEN LPSBA ICPZF BKUXN TAOEO YKQBZ WOZPW RZLEF EYJPX ROCZQ MBSUE AGVHT GHPEM LIQNL YATRO</p>
+
+<p class="label">— ATTACHED · INTERCEPT TAPE 047-A —</p>
+<audio controls preload="none" src="/assets/audio/clip-a.wav"></audio>
+
+<p class="foot">// SIGNAL ARCHIVE · this page is not indexed · the record is older than the reader</p>
+
+</div>
