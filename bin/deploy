@@ -95,7 +95,7 @@ git checkout -b $DEPLOY_BRANCH
 bundle exec jekyll build
 
 # Verify binary assets survived the build unmodified (no re-encoding); restore exact source bytes if touched
-for asset in assets/img/og_image.png assets/audio/clip-a.wav; do
+for asset in assets/img/og_image.png assets/audio/clip-a.wav assets/img/avatar.jpg; do
     if [ -f "$asset" ] && [ -f "_site/$asset" ]; then
         cmp -s "$asset" "_site/$asset" || { echo "deploy: build altered $asset; restoring source bytes" >&2; cp -f "$asset" "_site/$asset"; }
     elif [ -f "$asset" ]; then

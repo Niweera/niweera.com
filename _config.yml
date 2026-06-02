@@ -52,7 +52,7 @@ linkedin_username:
 scholar_userid: O8A5FNwAAAAJ
 orcid_id: 0000-0002-6129-5071
 medium_username: niweera # your Medium username
-quora_username: Nipuna-Weerasekara # your Quora username
+quora_username: # your Quora username
 publons_id: # your ID on Publons
 blogger_url: # your blogger URL
 work_url: 
@@ -109,7 +109,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", ".well-known"]
+include: ["_pages", ".well-known", ".nojekyll"]
 exclude:
   - bin
   - Gemfile
