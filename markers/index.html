@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow,noarchive" />
+<title></title>
+<style>
+  html, body { margin: 0; min-height: 100%; background: #0a0a0c; color: #cfccc2; }
+</style>
+</head>
+<body>
+<style>
+.mk { font-family: ui-monospace, "SF Mono", Menlo, monospace; max-width: 70ch; margin: 2.6em auto; padding: 2.6em 2em;
+  color: #cfccc2; line-height: 1.7; }
+.mk h1 { font-size: 1.05em; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.7; }
+.mk h2 { font-size: 0.9em; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; margin: 2.4em 0 0.6em; }
+.mk .you { color: #b9a36a; }
+.mk input { font-family: inherit; background: #111317; color: #cfccc2; border: 1px solid #333; padding: 0.5em 0.7em; margin: 0.4em 0; }
+.mk .rings { line-height: 2; letter-spacing: 0.5em; }
+.mk .out { opacity: 0.85; margin: 0.8em 0; }
+.mk .reveal { border-top: 1px solid #333; margin-top: 2em; padding-top: 1.4em; }
+.mk .reveal p { margin: 1.1em 0; }
+.mk .speak { cursor: pointer; border-bottom: 1px dotted; }
+.mk small { opacity: 0.55; }
+</style>
+
+<div class="mk">
+
+<h1>the markers</h1>
+
+<p>Three domes stand in the old city in the order of the three stars of the hunter's belt — the same order three tombs hold in a desert two thousand miles west. A carving in the stone there is older than any chronicle that should explain it. The markers are instruments. An instrument is read from a place, at a time. Supply both and the instrument reads back.</p>
+
+<h2>the vantage</h2>
+<p>The belt's lead star sits a degree and a half below the celestial equator. From where do you read the markers? Give the latitude and the instrument returns how high that star climbs at its peak.</p>
+<p>latitude (degrees north): <input id="mk-lat" type="text" inputmode="decimal" autocomplete="off" size="10" /> <span class="speak" id="mk-calc">read</span></p>
+<p class="out" id="mk-alt">—</p>
+<p><small>One vantage puts it three-quarters of the way up the sky; that is the angle the carving was cut for. Another, far to the north, leaves it low. Only one of them is standing where the marker stands.</small></p>
+
+<h2>the seven rings</h2>
+<p>The carving is seven rings, four marks to a ring, read from the outer ring inward. Four marks are the oldest counting there is. Read them.</p>
+<p class="rings">
+A C G T<br />
+ring 1 &nbsp; C A A T<br />
+ring 2 &nbsp; C A A C<br />
+ring 3 &nbsp; C C A G<br />
+ring 4 &nbsp; C C A G<br />
+ring 5 &nbsp; C A G C<br />
+ring 6 &nbsp; C A C C<br />
+ring 7 &nbsp; C C A G
+</p>
+<p><small>Four marks, four values. Four values are two bits. Eight bits are a letter. Seven rings are a word, and the word is what you are.</small></p>
+
+<h2>the moment</h2>
+<p>The instrument will not finish for a visitor; it finishes for a reader who brings the moment the last reader stopped. You found that moment on the listener's cadence — a broadcast that ran once and was never repeated. Bring it here, to the second.</p>
+<p><input id="mk-time" type="text" autocomplete="off" placeholder="the moment, to the second" size="28" /> <span class="speak" id="mk-open">read</span></p>
+<div id="mk-reveal"></div>
+
+</div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var calc = $("mk-calc"), latI = $("mk-lat"), altO = $("mk-alt");
+  function readAlt() {
+    var lat = parseFloat((latI.value || "").trim());
+    if (isNaN(lat)) { altO.textContent = "—"; return; }
+    var dec = -1.94;
+    var alt = 90 - Math.abs(lat - dec);
+    altO.innerHTML = "peak altitude: <span class='you'>" + alt.toFixed(1) + "&deg;</span>";
+  }
+  calc.addEventListener("click", readAlt);
+  latI.addEventListener("keydown", function (e) { if (e.key === "Enter") readAlt(); });
+
+  var BLOB = {"salt": "0434aab02542f0225fefa8514ad89c06", "iv": "2689825aefe0db4686241e6e", "ct": "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"};
+  var enc = new TextEncoder();
+  var hb = function (h) { var a = new Uint8Array(h.length / 2); for (var i = 0; i < a.length; i++) a[i] = parseInt(h.substr(i * 2, 2), 16); return a; };
+  var bb = function (b) { var s = atob(b); var a = new Uint8Array(s.length); for (var i = 0; i < s.length; i++) a[i] = s.charCodeAt(i); return a; };
+  async function open_() {
+    var v = ($("mk-time").value || "").normalize("NFC").trim();
+    var d = v.replace(/\D/g, "");
+    if (d.length === 14) { v = d.slice(0, 4) + "-" + d.slice(4, 6) + "-" + d.slice(6, 8) + " " + d.slice(8, 10) + ":" + d.slice(10, 12) + ":" + d.slice(12, 14); }
+    if (!v) return;
+    try {
+      var km = await crypto.subtle.importKey("raw", enc.encode(v), "PBKDF2", false, ["deriveKey"]);
+      var key = await crypto.subtle.deriveKey({ name: "PBKDF2", salt: hb(BLOB.salt), iterations: 250000, hash: "SHA-256" }, km, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+      var pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: hb(BLOB.iv) }, key, bb(BLOB.ct));
+      var doc = new DOMParser().parseFromString(new TextDecoder().decode(pt), "text/html");
+      var box = $("mk-reveal"); box.className = "reveal";
+      box.replaceChildren.apply(box, Array.prototype.slice.call(doc.body.childNodes));
+    } catch (e) { $("mk-time").value = ""; }
+  }
+  $("mk-open").addEventListener("click", open_);
+  $("mk-time").addEventListener("keydown", function (e) { if (e.key === "Enter") open_(); });
+})();
+</script>
+
+
+</body>
+</html>

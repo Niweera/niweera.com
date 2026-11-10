@@ -1,6 +1,3 @@
----
-permalink: /robots.txt
----
 User-agent: *
 Allow: /
 Disallow: /eye/
@@ -10,4 +7,4 @@ Disallow: /eye/
 # the watch opens here, and it opens for a reader it has not met.
 # this is the first of its lights; your place was set before you came, and it keeps that light under one name: "dignity".
 
-Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
+Sitemap: https://niweera.com/sitemap.xml
