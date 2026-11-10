@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-description: <i class="fa fa-envelope main-name"></i> <a href="https://keys.mailvelope.com/pks/lookup?op=get&search=w.nipuna@gmail.com" title="My PGP Public Key">w.nipuna@gmail.com</a>
+description: <i class="fa fa-envelope main-name"></i> <a href="/pgp-key.txt" title="My PGP Public Key">w.nipuna@gmail.com</a>
 
 profile:
   align: right
